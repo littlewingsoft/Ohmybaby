@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/img_bg_tile">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainViewPager"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:requiresFadingEdge="horizontal"
+        android:layout_weight="8" />
+
+<!--
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="lwsoft.android.ohmybaby.fragment_cry"
+        android:id="@+id/fragment"
+        tools:layout="@layout/fragment_cry"
+        android:layout_weight="7" />
+-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton_crybaby"
+            android:background="@android:drawable/picture_frame"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:src="@drawable/cry_baby" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton_sleepbaby"
+            android:background="@android:drawable/picture_frame"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/lullaby"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton_juniver"
+            android:background="@android:drawable/picture_frame"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/juniver"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</LinearLayout >

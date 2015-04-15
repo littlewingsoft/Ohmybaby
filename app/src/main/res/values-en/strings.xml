@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohmybaby</string>
+    <string name="str_randomplay">Shuffle</string>
+    <string name="str_sequancial">Sequential</string>
+    <string name="str_allstop">Stop</string>
+</resources>

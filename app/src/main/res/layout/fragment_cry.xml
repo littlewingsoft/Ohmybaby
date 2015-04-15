@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="7" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_01"
+                    android:tintMode="multiply"
+                    android:src="@drawable/animal_icon_01_normal" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton2"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_02_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_02"
+                    android:backgroundTintMode="multiply" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton3"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_03_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_03"
+                    android:backgroundTintMode="multiply" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton4"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_04"
+                    android:src="@drawable/animal_icon_04_normal" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton5"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_05_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_05" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton6"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_06_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_06" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton7"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_07"
+                    android:src="@drawable/animal_icon_07_normal" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton8"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_08_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_08" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton9"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_09_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_09" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton10"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_09"
+                    android:src="@drawable/animal_icon_14_normal" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton11"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_11_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_01" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton12"
+                    android:layout_weight="1"
+                    android:src="@drawable/animal_icon_12_normal"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_02" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton13"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_03"
+                    android:src="@drawable/effect_sleep_image_icon_15" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton14"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_01"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_04" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton15"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_02"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_05" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton16"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_06"
+                    android:src="@drawable/effect_sleep_image_icon_03" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton17"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_04"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_07" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton18"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_05"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_03" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton19"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_03"
+                    android:src="@drawable/effect_sleep_image_icon_06" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton20"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_07"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_04" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton21"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_08"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_05" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton22"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_07"
+                    android:src="@drawable/effect_sleep_image_icon_09" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton23"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_10"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_08" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton24"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_11"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_09" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton25"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_06"
+                    android:src="@drawable/effect_sleep_image_icon_12" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton26"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_13"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_07" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton27"
+                    android:layout_weight="1"
+                    android:src="@drawable/effect_sleep_image_icon_14"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/effect_sleep_button_03" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="#ff90b5ff"
+        android:weightSum="10" >
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton_stopall"
+            android:src="@drawable/icon_stop_normal"
+            android:layout_weight="7"
+            android:background="@null"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton_timer"
+            android:src="@drawable/icon_time_infinity_normal"
+            android:layout_weight="3"
+            android:background="@null"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohmybaby</string>
+    <string name="str_allstop">停止</string>
+    <string name="str_randomplay">何でも</string>
+    <string name="str_sequancial">順番に</string>
+</resources>

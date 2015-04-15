@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohmybaby</string>
+    <string name="str_randomplay">아무거나</string>
+    <string name="str_sequancial">순서대로</string>
+    <string name="str_allstop">정지</string>
+</resources>

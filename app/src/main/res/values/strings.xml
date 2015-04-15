@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ohmybaby</string>
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="str_sequancial">Sequential</string>
+    <string name="str_randomplay">Random</string>
+    <string name="str_allstop">Stop</string>
+</resources>

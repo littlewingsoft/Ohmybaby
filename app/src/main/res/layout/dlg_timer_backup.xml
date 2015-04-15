@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_unlimit"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_10min"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_20min"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_30min"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_60min"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_button_120min"
+        android:src="@drawable/selector_dlg_button_unlimit" />
+
+</LinearLayout>
