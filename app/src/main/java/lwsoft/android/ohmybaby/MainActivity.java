@@ -43,8 +43,12 @@ public class MainActivity extends FragmentActivity  {
 
         mPagerAdapter =  new pagerAdapter( getSupportFragmentManager()  );
 
+
         vp.setAdapter( mPagerAdapter );
         vp.setCurrentItem( id_fragment_cry );
+
+        //vp.setClipChildren(false);
+        //vp.setClipToPadding(false);
 
         setupTabs();
 
@@ -59,13 +63,26 @@ public class MainActivity extends FragmentActivity  {
 
                 switch(position){
                     case 0:
+                    {
+                        View v = findViewById(R.id.mainTab);
+                        v.setVisibility(View.VISIBLE);
                         imgbtn_cry.setSelected(true);
+                    }
                         break;
                     case 1:
+                    {
+                        View v = findViewById(R.id.mainTab);
+                        v.setVisibility(View.VISIBLE);
                         imgbtn_sleep.setSelected(true);
+                    }
+
                         break;
                     case 2:
+                    {
                         imgbtn_juniver.setSelected(true);
+                        View v = findViewById(R.id.mainTab);
+                        v.setVisibility(View.GONE);
+                    }
                         break;
                 }
             }
@@ -116,51 +133,6 @@ public class MainActivity extends FragmentActivity  {
 
     }
 
-    public HashMap<String,MediaPlayer> mpList = new HashMap<>();
-
-    public boolean isPlaying( String str ){
-        if( mpList.containsKey( str ) ) {
-            MediaPlayer mp = mpList.get(str);
-            return mp.isPlaying();
-        }
-        return false;
-    }
-
-    public void stop_asset(String str){
-
-        if( mpList.containsKey( str ) ) {
-            MediaPlayer mp = mpList.get(str);
-            mp.stop();
-            Log.i("tag_", "stop_asset:" + str);
-            mp.release();
-            mp=null;
-            mpList.remove(str);
-        }
-    }
-    public void player_asset( String str,boolean bLoop){
-
-            try {
-                MediaPlayer mp = null;
-                if(mpList.containsKey(str)){
-                    mp = mpList.get(str);
-                }else
-                {
-                    mp = new MediaPlayer();
-                    mpList.put(str, mp);
-                    AssetFileDescriptor descriptor = getAssets().openFd(str);
-                    mp.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
-                    descriptor.close();
-                }
-
-                mp.prepare();
-                mp.setVolume(1f, 1f);
-                mp.setLooping(bLoop);
-                mp.start();
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-    }
     /**
      * Manager of Sounds
      */
@@ -180,6 +152,18 @@ public class MainActivity extends FragmentActivity  {
         if( mp != null )
             mp.start();
     }*/
+
+    @Override
+    public void onBackPressed() {
+        if( vp.getCurrentItem() -1 >= 0 )
+        {
+            vp.setCurrentItem( vp.getCurrentItem()-1, true );
+        }else
+        {
+            finish();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

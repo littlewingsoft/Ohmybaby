@@ -3,7 +3,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#ddff0000"
+    android:background="#dfffce00"
     android:alpha="128"
     android:theme="@android:style/Theme.Translucent.NoTitleBar"
     android:touchscreenBlocksFocus="false">

@@ -1,6 +1,7 @@
 package lwsoft.android.ohmybaby;
 
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,9 +80,9 @@ public class fragment_cry extends Fragment {
                                  @Override
                                  public void onClick(View v) {
 
-                                     if( MainActivity.inst.isPlaying(soundFile) )
+                                     if( isPlaying(soundFile) )
                                      {
-                                         MainActivity.inst.stop_asset(soundFile);
+                                         stop_asset(soundFile);
                                          v.setBackgroundColor(  Color.argb(255, 255, 255, 255));
                                          v.setBackgroundDrawable( mBackupBtnBG.get(resid_btn) );
                                          //Toast.makeText(con,"stop : "+soundFile,Toast.LENGTH_SHORT ).show();
@@ -88,7 +90,7 @@ public class fragment_cry extends Fragment {
                                      }
                                      else
                                      {
-                                         MainActivity.inst.player_asset(soundFile, true);
+                                         player_asset(soundFile, true);
                                          v.setBackgroundColor(  Color.argb(0,255,255,255));
                                          //Toast.makeText(con,"play : "+soundFile,Toast.LENGTH_SHORT ).show();
                                      }
@@ -103,8 +105,8 @@ public class fragment_cry extends Fragment {
 
             @Override
             public void onClick(View v) {
-                for( String key : MainActivity.inst.mpList.keySet() ){
-                    MediaPlayer mp = MainActivity.inst.mpList.get(key);
+                for( String key : mpList.keySet() ){
+                    MediaPlayer mp = mpList.get(key);
                     if( mp.isPlaying() )
                     {
                         mp.stop();
@@ -120,28 +122,56 @@ public class fragment_cry extends Fragment {
             }
         });
 
-        final ImageButton v2 = (ImageButton)rootView.findViewById(R.id.imageButton_timer);
-        v2.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View v) {
-                showDialog_timer();
-            }
-        });
 
     }
 
-    void showDialog_timer() {
 
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Fragment prev = getFragmentManager().findFragmentByTag("dialog_timer");
-        if (prev != null) {
-            ft.remove(prev);
+
+    public HashMap<String,MediaPlayer> mpList = new HashMap<>();
+
+    public boolean isPlaying( String str ){
+        if( mpList.containsKey( str ) ) {
+            MediaPlayer mp = mpList.get(str);
+            return mp.isPlaying();
         }
-        ft.addToBackStack(null);
+        return false;
+    }
 
-        DialogFragment newFragment = dlg_timer.newInstance();
-        newFragment.show(ft, "dialog_timer");
+    public void stop_asset(String str){
+
+        if( mpList.containsKey( str ) ) {
+            MediaPlayer mp = mpList.get(str);
+            mp.stop();
+            Log.i("tag_", "stop_asset:" + str);
+            mp.release();
+            mp=null;
+            mpList.remove(str);
+        }
+    }
+    public void player_asset( String str,boolean bLoop){
+
+        try {
+            MediaPlayer mp = null;
+            if(mpList.containsKey(str)){
+                mp = mpList.get(str);
+            }else
+            {
+                mp = new MediaPlayer();
+                mpList.put(str, mp);
+                AssetFileDescriptor descriptor = getActivity().getAssets().openFd(str);
+                mp.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+                descriptor.close();
+            }
+
+            mp.prepare();
+            mp.setVolume(1f, 1f);
+            mp.setLooping(bLoop);
+            mp.start();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
